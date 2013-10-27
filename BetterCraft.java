@@ -23,27 +23,7 @@ public class BetterCraft {
         @EventHandler // used in 1.6.4
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
-                
-                //Registrations Item
-                rodDiamond = new RodDiamond(5002).setUnlocalizedName("rodDiamond").setCreativeTab(CreativeTabs.tabMisc);
-                GameRegistry.registerItem(rodDiamond, "rodDiamond");
-                LanguageRegistry.addName(rodDiamond, "Diamond Rod");
-                
-                GameRegistry.addRecipe(new ItemStack(Item.leather), "###", "###", "###",
-                		'#', Item.rottenFlesh);
-                GameRegistry.addRecipe(new ItemStack(Item.saddle), " # ", "# #", "# #",
-                		'#', Item.leather);
-                GameRegistry.addRecipe(new ItemStack(Item.pocketSundial), "$@$", "###",
-                		'$', Item.ingotGold,
-                		'@', Item.redstone,
-                		'#', Block.stone);
-                GameRegistry.addRecipe(new ItemStack(Item.compass), "$@$", "###",
-                		'$', Item.ingotIron,
-                		'@', Item.redstone,
-                		'#', Block.stone);
-                GameRegistry.addShapelessRecipe(new ItemStack(Item.gunpowder, 1), new Object[]{
-                		Block.cobblestone,
-                		Item.flint});
+        
         }
         
         @EventHandler // used in 1.6.4
@@ -55,13 +35,6 @@ public class BetterCraft {
         @EventHandler
         public void serverStarting(FMLServerStartingEvent event)
         {
-        	CommandHandler commandManager = (CommandHandler)event.getServer().getCommandManager();
-            commandManager.registerCommand(new CommandSeed());
-            commandManager.registerCommand(new CommandHome());
-            commandManager.registerCommand(new CommandNoon());
-            commandManager.registerCommand(new CommandMidnight());
-            commandManager.registerCommand(new CommandRain());
-            commandManager.registerCommand(new CommandClear());
-            commandManager.registerCommand(new CommandButcher());
+        
         }
 }
