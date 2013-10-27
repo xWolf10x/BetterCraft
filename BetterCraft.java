@@ -11,9 +11,6 @@ public class BetterCraft {
         // Says where the client and server 'proxy' code is loaded.
         @SidedProxy(clientSide="xWolf10x.bettercraft.client.ClientProxy", serverSide="xWolf10x.bettercraft.CommonProxy")
         public static CommonProxy proxy;
-                
-        //Registrations
-        public static Item rodDiamond;
         
         @EventHandler // used in 1.6.4
         public void preInit(FMLPreInitializationEvent event) {
